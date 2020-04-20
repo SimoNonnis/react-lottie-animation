@@ -20,7 +20,9 @@ const Drink = () => {
   return (
     <div>
       <Lottie options={options} height={300} width={300} isPaused={paused} />
-      <button onClick={handlePause}>{paused ? 'Play' : 'Pause'}</button>
+      <button className="button" onClick={handlePause}>
+        {paused ? 'Play' : 'Pause'}
+      </button>
     </div>
   );
 };

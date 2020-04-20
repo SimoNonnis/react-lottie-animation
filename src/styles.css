@@ -2,3 +2,12 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.button {
+  background-color: tomato;
+  padding: 10px;
+  border-radius: 4px;
+  color: whitesmoke;
+  margin-top: 20px;
+  min-width: 100px;
+}
