@@ -13,7 +13,7 @@ const Drink = () => {
     }
   };
 
-  return <Lottie options={options} />;
+  return <Lottie options={options} height={300} width={300} />;
 };
 
 export default Drink;
