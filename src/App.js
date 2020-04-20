@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import Drink from "./components/Drink";
-import "./styles.css";
+import Drink from './components/Drink';
+import './styles.css';
 
 export default function App() {
   return (

@@ -1,7 +1,7 @@
-import React from "react";
-import Lottie from "react-lottie";
+import React from 'react';
+import Lottie from 'react-lottie';
 
-import animationDrink from "../animations/animationDrink.json";
+import animationDrink from '../animations/animationDrink.json';
 
 const Drink = () => {
   const options = {
@@ -9,7 +9,7 @@ const Drink = () => {
     autoplay: true,
     animationData: animationDrink,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
+      preserveAspectRatio: 'xMidYMid slice'
     }
   };
 
