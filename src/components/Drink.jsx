@@ -32,6 +32,7 @@ const Drink = () => {
         height="80%"
         width="80%"
         isStopped={stopped}
+        speed={4}
         eventListeners={[
           {
             eventName: 'complete',
