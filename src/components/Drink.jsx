@@ -13,17 +13,25 @@ const options = {
 };
 
 const Drink = () => {
-  const [paused, setPaused] = useState(false);
+  const [stopped, setStopped] = useState(false);
+  const [completed, setCompleted] = useState(false);
 
-  const handlePause = () => setPaused(!paused);
-  const handleAnimationComplete = () => console.log('the animation completed:');
+  const handleStart = () => {
+    setStopped(false);
+    setCompleted(false);
+  };
+  const handleAnimationComplete = () => {
+    setCompleted(true);
+    setStopped(true);
+  };
+
   return (
     <div>
       <Lottie
         options={options}
         height="80%"
         width="80%"
-        isPaused={paused}
+        isStopped={stopped}
         eventListeners={[
           {
             eventName: 'complete',
@@ -32,9 +40,13 @@ const Drink = () => {
         ]}
       />
 
-      <button className="button" onClick={handlePause}>
-        {paused ? 'Play' : 'Pause'}
-      </button>
+      {!completed ? (
+        <p>Running...</p>
+      ) : (
+        <button className="button" onClick={handleStart}>
+          Restart
+        </button>
+      )}
     </div>
   );
 };
